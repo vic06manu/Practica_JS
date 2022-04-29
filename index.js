@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function removeTodo(id) {
         console.log(id);
     }
-}
-
     function addTodo() {
         if (title.value === '' || descripton.value === '') {
             alert.classList.remove('d-none');
