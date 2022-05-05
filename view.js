@@ -4,15 +4,13 @@ export default class View {
     constructor(){
         this.model = null;
         this.table = document.getElementById('table');
-
-        
         this.filters = new Filters();
 
         this.filters.onClick((filters) => this.filters(filters));
     }
-    
+
     filter(filters){
-        const { type, words} = filters;        
+        const { type, words} = filters;
         const [, ...rows] = this.table.getElementsByTagName('tr');
         for (const row of rows){
             const [title, description, completed] = row.children;
@@ -28,7 +26,7 @@ export default class View {
             if(type !== 'all' && shouldBeCompleted !== isCompleted){
                 shoulHide = true;
             }
-            
+
             if(shoulHide){
                 row.classList.add('d-none');
             } else{

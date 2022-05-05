@@ -15,7 +15,7 @@ class Model{
         } else{
             this.currentId = this.todos[this.todos.lenght = 1].id + 1;
         }
-        
+
     }
 
     setView(view) {
